@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech & Story Lab</title>
+    <!-- CSS LINKS -->
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/productlist.css" />
+  </head>
+  <body>
+    <div class="greyline">
+      <a href="none">MitKEA - intranet for KEA-studerende </a>
+      <a href="none">Find din uddannelse </a>
+      <a href="none">Serviceportal </a>
+      <a href="none">Itslearning </a>
+      <a href="none">Bibliotek </a>
+      <a class="orange" href="none">KEA.DK </a>
+    </div>
+    <header>
+      <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+      <!-- Top Navigation Menu -->
+      <div class="topnav">
+        <div id="myLinks">
+          <a href="#news">News</a>
+          <a href="#contact">Contact</a>
+          <a href="#about">About</a>
+        </div>
+
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="brand">
+        <img class="logomain" src="images/logomain.webp" alt="Logo Main" />
+        <img class="logosmall" src="images/logo-small.webp" alt="Small Logo" />
+      </div>
+      <div class="listmenu">
+        <a href="none">Studiehåndbog</a>
+        <a href="none">Vejledning og støtte</a>
+        <a href="none">Praktik</a>
+        <a href="none">Internationale muligheder</a>
+        <a href="none">Studieliv og Fasciliteter</a>
+      </div>
+      <div class="utilities">
+        <div class="language">
+          <a href="none">EN</a>
+        </div>
+        <div class="searchBar">
+          <a href="none">Q</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section></section>
+    </main>
+
+    <template id="smallProductTemplate">
+      <article class="smallProduct">
+        <img src="images/fillerimage.webp" alt="Product Image" />
+        <h2></h2>
+        <h3></h3>
+        <p class="subtle"><span class="subCategory"></span> | <span class="brandName"></span></p>
+        <!-- A button to open the popup form -->
+        <button class="reserve" onclick="openForm()">Reserve</button>
+
+        <!-- The form -->
+        <div class="form-popup" id="myForm">
+          <form action="/action_page.php" class="form-container">
+            <h1>Reserve</h1>
+
+            <label for="email"><b>School e-mail</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required />
+
+            <label for="psw"><b>Studiekort nr.</b></label>
+            <input type="text" placeholder="Enter Number" name="psw" required />
+
+            <button type="submit" class="btn">Reserve Item</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+      </article>
+    </template>
+
+    <script src="js/productlist.js"></script>
+  </body>
+</html>
